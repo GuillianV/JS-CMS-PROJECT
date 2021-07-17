@@ -1,0 +1,24 @@
+{
+  "name": "blank-patern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "home": "parcel public-parcel/html/index.html",
+    "dev": "parcel public-parcel/html/*html",
+    "build": "parcel build public-parcel/html/*html --no-minify --no-source-maps --no-cache --public-url ./"
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["./*"]
+    }
+  },
+  "keywords": [],
+  "author": "GuillianV",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
