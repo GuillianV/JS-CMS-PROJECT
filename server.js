@@ -1,21 +1,16 @@
 //---------------Gestion des imports
 let express = require("express")
 let app = express()
-
-let http = require("http");
+const bodyParser = require('body-parser');
+let http = require("https");
 let server = http.Server(app)
 
 let gitignore = require("./modules/gitignore.js")
 
-// let { Pool, Client } = require('pg');
-// let myDatabase = require("./modules/databaseConnect.js")
+let { Pool, Client } = require('pg');
+let myDatabase = require("./modules/databaseConnect.js")
+
 app.use(express.static(__dirname + "/dist"))
-app.use(express.static(__dirname + "/public-parcel/dist"))
-app.use(express.static(__dirname + "/public-parcel"))
-
-
-//-----------------GEstion des paths
-
 
 
 app.get("/", (req, res) => {
